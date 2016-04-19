@@ -5,6 +5,20 @@ Idag skal vi prøve ut prototyping med FramerJS.
 Hvis du ikke allerede har gjort det gå til [FramerJS.com](http://www.framerjs.com) for å laste ned Framers AutoCode.
 
 
+## Start av lokal server:
+
+Hvis du heller vil starte en lokal server for å se denne guiden - noe som også gir deg alle eksempler inline:
+
+    git@github.com:hkwaller/framer-workshop.git
+
+cd inn i repo
+
+    npm i
+    npm start
+
+et vindu vil da åpne seg med alle eksemplene
+
+
 ## Kort om Framer
 
 Det ble laget for å enkelt kunne gjøre prototyper der muligheten for bruk av kode fjerner mange av begrensningene man finner i mange av konkurrentene.

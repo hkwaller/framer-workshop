@@ -1,0 +1,23 @@
+{
+  "name": "framer-workshop",
+  "version": "1.0.0",
+  "description": "Idag skal vi prøve ut prototyping med FramerJS.",
+  "main": "index.js",
+  "scripts": {
+    "start": "md-server README.md"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hkwaller/framer-workshop.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hkwaller/framer-workshop/issues"
+  },
+  "homepage": "https://github.com/hkwaller/framer-workshop#readme",
+  "dependencies": {
+    "md-server": "0.0.5"
+  }
+}
