@@ -344,3 +344,9 @@ Skal et layer opp eller ned?
 
 		if layer.states.current == "stateA"
 			layer.states.switch("navnPåState")
+
+## Ferdig?
+
+Sjekk ut http://frameco.de for litt inspirasjon og prøv å lage noe selv.
+
+>Visste du at du også kan importere fra Sketch? Pass på å legge dine layers i egne grupper da det er disse du vil referere i Framer.
