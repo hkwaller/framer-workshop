@@ -37,7 +37,7 @@ Framer har mange forskjellige byggestener, men man kan si at de fire mest grunnl
 
 ### Layers
 
-Ett layer er akkurat som det høres ut et lag vi kan manipulere på forskjellige måter. Det kan være en enkel boks, det kan være en sirkel, et bilde, en bakgrunn. Ett layer er selve grunnsteinen å vil være å finne i nesten enhver prototype.
+Ett `layer` er akkurat som det høres ut et lag vi kan manipulere på forskjellige måter. Det kan være en enkel boks, det kan være en sirkel, et bilde, en bakgrunn. Ett `layer` er selve grunnsteinen å vil være å finne i nesten enhver prototype.
 
 ### States
 
@@ -49,12 +49,12 @@ En viktig del av en prototype er selvfølgelig animasjoner. Det er de som gir li
 
 ### Events
 
-For å få til interaksjon med brukeren brukes events på f.eks. et layer. Det kan være et klikk eller en swipe. Men det kan også være en reaksjon på noe annet; f.eks. på en animasjon som akkurat er blitt ferdig kan vi bruke events for å gjøre noe annet når det skjer.
+For å få til interaksjon med brukeren brukes events på f.eks. et `layer`. Det kan være et klikk eller en swipe. Men det kan også være en reaksjon på noe annet; f.eks. på en animasjon som akkurat er blitt ferdig kan vi bruke events for å gjøre noe annet når det skjer.
 
 
 ## Jobbe i AutoCode
 
-Som tidligere nevnt er Framer blitt en crossover. Vi kan således velge selv hvis vi vil gjøre så mye som mulig i GUI eller om vi heller koder. Du må uansett kunne en del kode for å kunne gjøre noe litt mer avansert i Framer. Men her er det bare å finne sin egen måte å jobbe på.
+Som tidligere nevnt har Framer blitt noe av en crossover. Vi kan således velge selv hvis vi vil gjøre så mye som mulig i GUI eller om vi heller koder. Du må uansett kunne en del kode for å kunne gjøre noe litt mer avansert i Framer. Men her er det bare å finne sin egen måte å jobbe på.
 
 Her er ett screenshot fra appen:
 
@@ -82,7 +82,7 @@ Eksempel: https://share.framerjs.com/vf00q4mfxozd/
 
 #### Hint:
 
-Bruk pluss-menyen oppe til venstre eller bruk taste kombinasjon CMD+SHIFT+N for å lage et layer. Dette kan du så flytte rundt i kolonnen til høyre.
+Bruk pluss-menyen oppe til venstre eller bruk taste kombinasjon `CMD+SHIFT+N `for å lage et `layer`. Dette kan du så flytte rundt i kolonnen til høyre.
 
 Animasjoner lages slik:
 
@@ -111,23 +111,23 @@ Eksempel: http://share.framerjs.com/sbggjcm6v3pz/
 <br/>
 #### Hint:
 
-Du kan legge til states med pluss-ikonet oppe til venstre. Flytt så rundt ditt layer eller endre tilstand i den midterste kolonnen.
+Du kan legge til states med pluss-ikonet oppe til venstre. Flytt så rundt ditt `layer` eller endre tilstand i den midterste kolonnen.
 
-For å gå mellom ulike states kan du enten velge:
+For å gå mellom ulike `states` kan du enten velge:
 
     layer.states.next()
 
-eller så kan du velge hvilken state du vil bytte til:
+eller så kan du velge hvilken `state` du vil bytte til:
 
     layer.states.switch("navnPåState")
 
-dette kan du enten gjøre med Events eller for eksempel en setInterval
+dette kan du enten gjøre med `Events` eller for eksempel en `setInterval`
 
 	setInterval ->
     	layerA.states.next()
     , 1000
 
-Da vil vi bytte til neste state hver sekund. Vert å notere er at første tilstanden også byttes til når vi velger .next().
+Da vil vi bytte til neste state hver sekund. Vert å notere er at første tilstanden også byttes til når vi velger `.next()`.
 <br/><br/><br/>
 >Hvis du syns animasjonene er litt triste på states så kan du legge til animationOptions:
 
@@ -148,7 +148,7 @@ Da vil vi bytte til neste state hver sekund. Vert å notere er at første tilsta
 
 Du kan fortsette på den forrige prototypen din hvis du vil.
 
-Vi ska nå teste ut events. Disse finner du også på pluss-menyen, velg 'Events' å legg til en event for valgfritt layer å få noe til å skje.
+Vi ska nå teste ut `events`. Disse finner du også på pluss-menyen, velg `Events` å legg til en event for valgfritt `layer` å få noe til å skje.
 
 Eksempel: http://share.framerjs.com/6gasty0th5hi/
 <iframe src="https://share.framerjs.com/6gasty0th5hi/" height="400px" width="300px" ></iframe>
@@ -171,11 +171,11 @@ Eksempel: http://share.framerjs.com/jgpdnbiunlly/
 
 For å enklere plassere mange elementer kan det være en god idé å bruke en container på samme måte som vi gjør mange andre steder.
 
-Hvis du vil legge et layer i en container brukes:
+Hvis du vil legge et layer i en `container` brukes:
 
     superLayer: navnPåContainer
 
-Det legges til når du oppretter et layer.
+Det legges til når du oppretter et `layer`.
 
 <br/><br/>
 <br/><br/>
@@ -192,15 +192,15 @@ Eksempel: http://share.framerjs.com/3m6hhfxndbhs/
 
 
 
-Det er alltid litt trist å gjøre samme ting mange ganger. Prøv å populere en prototype med noen layers ved å ta i bruk en for-løkke.
+Det er alltid litt trist å gjøre samme ting mange ganger. Prøv å populere en prototype med noen layers ved å ta i bruk en `for`-løkke.
 
-For-løkker i CoffeScript lages slik:
+`For`-løkker i CoffeScript lages slik:
 
 	for index in [0...4]
     	layer = new Layer
         	...
 
-Viktig å tenke på her er posisjonering. Kanskje det kunne være lurt å bruke en array som holder på posisjoner? Ellers kan man også ta i bruk en Utility-funksjon for å plassere layers litt tilfeldig:
+Viktig å tenke på her er posisjonering. Kanskje det kunne være lurt å bruke en `array` som holder på posisjoner? Ellers kan man også ta i bruk en `Utility`-funksjon for å plassere `layers` tilfeldig:
 
 	Utils.randomNumber(maksGrense)
 
@@ -214,7 +214,7 @@ For å gjøre noe flyttbart i Framer kan vi bruke:
 
 	layerName.draggable = true
 
-Prøv ut dette, å sjekk om du kan få layeret å returnere til sin opprinnelige posisjon når forflyttningen avsluttes.
+Prøv ut dette, å sjekk om du kan få `layeret` å returnere til sin opprinnelige posisjon når forflyttningen avsluttes.
 
 Eksempel: http://share.framerjs.com/1t3gmtvq60qk/
 <iframe src="https://share.framerjs.com/1t3gmtvq60qk/" height="400px" width="300px" ></iframe>
@@ -227,10 +227,20 @@ Sjekk ut eventen
 
     layer.onDragEnd
 
+
+### #6b
+
+Gå tilbake til oppgave 5 å se om du kan kombinere den med oppgave 6 for å få de individuelle `layerene` å animeres på avsluttet `drag`.
+
+Eksempel: http://share.framerjs.com/lr0ctjaw2531/
+<iframe src="https://share.framerjs.com/lr0ctjaw2531/" height="400px" width="300px" ></iframe>
+
+
+
 <br/><br/>
 ### #7 - ScrollComponent
 
-Mange prototyper har en Scrollist. I Framer er dette relativt enkelt å implementere. Start et nytt prosjekt å legg inn dette bildet http://i.imgur.com/496Im0W.png i et layer. Her kan vi for eksempel velge Image istedenfor Layer fra pluss-menyen.
+Mange prototyper har en `Scrollist`. I Framer er dette relativt enkelt å implementere. Start et nytt prosjekt å legg inn dette bildet http://i.imgur.com/496Im0W.png i et `layer`. Her kan vi for eksempel velge `Image` istedenfor `Layer` fra pluss-menyen.
 
 Eksempel: http://share.framerjs.com/wgr8u3b505cx/
 <iframe src="https://share.framerjs.com/wgr8u3b505cx/" height="400px" width="300px" ></iframe>
@@ -238,14 +248,14 @@ Eksempel: http://share.framerjs.com/wgr8u3b505cx/
 
 #### Hint
 
-Du lager en ScrollComponent slik:
+Du lager en `ScrollComponent` slik:
 
 	scroll = new ScrollComponent
 		height: Screen.height
 		width: Screen.width
 		backgroundColor: "#fff"
 
-For å legge inn ett layer i ett ScrollLayer kan vi bruke
+For å legge inn ett `layer` i ett `ScrollLayer` kan vi bruke
 
 	superLayer: navnPåScrollLayer.content
 
@@ -257,7 +267,7 @@ Eksempel: http://share.framerjs.com/i8b0d45gyhhy/
 <iframe src="https://share.framerjs.com/i8b0d45gyhhy/" height="400px" width="300px" ></iframe>
 
 
-Akkurat som med scroll så er PageComponent viktig. Den brukes for alt fra en bildekarusell til onboarding. Også her finnes det en ferdig komponent i Framer å ta i bruk.
+Akkurat som med scroll så er `PageComponent` viktig. Den brukes for alt fra en bildekarusell til onboarding. Også her finnes det en ferdig komponent i Framer å ta i bruk.
 
 Det vi må tenke på her er at den må populeres med flere layers, vi kan ikke bare legge inn et bilde som vi gjorde i scrollkomponenten.
 
@@ -270,7 +280,7 @@ En horisontell pagekomponent som dekker hele skjermen lages eksempelvis slik:
 
 #### Hint
 
-For å enkelt legge til layers i en PageComponent kan vi bruke en for-løkke. Hvis du f.eks. har en PageComponent som går horisontellt kan man legge til layers for å  så gange opp med index sammen med bredden på ett layer.
+For å enkelt legge til `layers` i en `PageComponent` kan vi bruke en `for`-løkke. Hvis du f.eks. har en `PageComponent` som går horisontellt kan man legge til `layers` for å  så gange opp med index sammen med bredden på ett `layer`.
 
 	for index in [0...10]
       layer = new Layer
@@ -295,7 +305,7 @@ Her har vi blant annet:
 Som kan brukes til å lytte på endringer.
 
 <br/>
-For å få tilgang til det aktuelle layeret kan vi da bruke
+For å få tilgang til det aktuelle `layeret` kan vi da bruke
 
 	pageComponent.currentPage
 
@@ -335,15 +345,44 @@ Forslag til løsning:
 
 * Legg ut store knappen med de tre små under
 * Legg til states for hvordan alla knappene skal animeres eller forflyttes
-* Trenger click-events på alle knapper som skal bytte mellom ulike states
+* Trenger `click-events` på alle knapper som skal bytte mellom ulike `states`
 
 
 #### Hint
 
-Skal et layer opp eller ned?
+Skal et `layer` opp eller ned?
 
 		if layer.states.current == "stateA"
 			layer.states.switch("navnPåState")
+<br/><br/>
+### #3 Egne moduler
+---
+
+En bra ting kan være å kunne skrive egne moduler. Framer legger fint tilrette for dette.
+
+Hvert prosjekt du starter med Framer AutoCode lager en mappe i filstrukturen som heter `modules`. Det er her vi kan legge til våre egne moduler.
+
+Åpne opp en prosjektmappe i valfri editor og åpne filen `myModule.coffe`.
+
+Øverst i filen står det forklart hvordan du kan bruke moduler.
+<br/><br/><br/>
+Men hva om vi vil gjøre noe litt mer spennende?
+
+Eksempel: http://share.framerjs.com/5oojc14b3px2/ (klikk i inputfeltet)
+<iframe src="https://share.framerjs.com/5oojc14b3px2/" height="400px" width="300px" ></iframe>
+
+For å kunne lage denne kommer du trenge ett bilde på ett tastatur, for eksempel dette: http://i.imgur.com/jB5hf12.png
+
+Denne modulen er en `class` som extender `layer`. Den tar inn en Y-verdi for å posisjonere tastaturet og har en `event` for å åpne og lukke tastaturet.
+
+For at den ska fungere trenger vi noen ting:
+* Sette inn bildet
+* Størrelsen på skjermen
+* Hente inn hvor på skjermen tastaturet ska vises (det som blir y:0 for tastaturet)
+* `Event`for klikk
+
+Husk at modulen må eksporteres!
+
 
 ## Ferdig?
 
